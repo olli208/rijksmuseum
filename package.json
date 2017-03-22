@@ -1,0 +1,25 @@
+{
+  "name": "wafs-copy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "browserify  server.js -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "ngrok": "2.2.6",
+    "nodemon": "1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "ejs": "^2.5.6",
+    "express": "4.14.0",
+    "nunjucks": "3.0.0",
+    "request": "^2.81.0"
+  }
+}
+

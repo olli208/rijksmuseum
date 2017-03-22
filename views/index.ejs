@@ -1,0 +1,31 @@
+<% include partials/header.ejs %>
+    <section class="#">
+        <header>
+            <img src="https://www.rijksmuseum.nl/WebStatic/Images/Logo/rijksmuseum-logo-combined.png">
+            <h1>Single Page Web App</h1>
+        </header>
+
+        <p>Deze Single Page Webapp is gemaakt met de Rijksmuseum API. U kunt hiermee door de grote collectie doorzoeken. Deze app maakt gebruik van libraries als routie en handlebars.</p>
+
+        <!--<input type="search" id="searchBar" placeholder="ex. 'rembrandt', 'blauw', 'vermeer' "><button id="searchBar__btn">SEARCH</button>-->
+
+        <div id="spinner" class="spinner section__hide">
+            <div class="rect4"></div>
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+        </div>
+
+        <h2 id="alertmsg"></h2>
+
+        <ul>
+            <% data.artObjects.forEach(function(data){ %>
+            <li>
+                <h2><%= data.longTitle %></h2>
+                <img src="<%= data.headerImage.url %>">
+                <a href="object/<%= data.objectNumber %>"><button>DETAIL</button></a>
+            </li>
+            <% }) %>
+        </ul>
+    </section>
+<% include partials/footer.ejs %>
