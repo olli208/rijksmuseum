@@ -5,12 +5,13 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "browserify  server.js -o bundle.js"
+    "build": "browserify  server.js -o build.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^14.1.0",
+    "compression": "^1.6.2",
     "ngrok": "2.2.6",
     "nodemon": "1.11.0"
   },
@@ -22,4 +23,3 @@
     "request": "^2.81.0"
   }
 }
-

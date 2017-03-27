@@ -86987,7 +86987,8 @@ app.get('/object/:id', detailPage);
 app.listen(3000);
 
 function home(req, res) {
-    request(host + "?q=" + query + '&key=NG2q9L0R&format=json&ps=5&type=', function (error, response, body) {
+    // query = req.body.userName;
+    request(host + "?q=" + query + '&key=NG2q9L0R&format=json&ps=10&type=', function (error, response, body) {
         if(!error && response.statusCode == 200) {
             data = JSON.parse(body);
             res.render('index', {

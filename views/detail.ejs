@@ -1,13 +1,13 @@
 <% include partials/header.ejs %>
 <section class="#">
     <header>
-        <h1>Detail</h1>
+        <h2><%= data.artObject.title %></h2>
     </header>
 
-    <section>
-        <h1><%= data.artObject.id %></h1>
+    <div>
         <img src="<%= data.artObject.webImage.url %>">
-    </section>
+        <p><%= data.artObject.description %></p>
+    </div>
 
 </section>
 

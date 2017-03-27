@@ -1,4 +1,5 @@
 var express = require('express');
+var compression  = require('compression');
 var bodyParser = require('body-parser');
 var request = require('request');
 var path = require('path');
@@ -11,6 +12,11 @@ var host = 'https://www.rijksmuseum.nl/api/nl/collection';
 var query = 'rembrandt';
 var data = [];
 var detail = [];
+
+app.use(compression({
+        threshold: 0,
+        filter: () => true,// Compress all assets by default
+}));
 
 // View Engine
 app.set('view engine' , 'ejs' );
@@ -30,8 +36,9 @@ app.get('/object/:id', detailPage);
 app.listen(3000);
 
 function home(req, res) {
-    request(host + "?q=" + query + '&key=NG2q9L0R&format=json&ps=5&type=', function (error, response, body) {
-        if(!error && response.statusCode == 200) {
+    // query = req.body.userName;
+    request(host + "?q=" + query + '&key=NG2q9L0R&format=json&ps=10&type=', function (error, response, body) {
+        if(!error && response.statusCode === 200) {
             data = JSON.parse(body);
             res.render('index', {
                 data: data
@@ -42,7 +49,7 @@ function home(req, res) {
 
 function detailPage(req, res) {
     request('https://www.rijksmuseum.nl/api/nl/collection/' + req.params.id + '?key=NG2q9L0R&format=json', function (error, response, body) {
-        if(!error && response.statusCode == 200) {
+        if(!error && response.statusCode === 200) {
             detail = JSON.parse(body);
             res.render('detail', {
                 data: detail
