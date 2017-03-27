@@ -18,8 +18,8 @@ To build run the following command:
 ```
 npm run build
 ```
-It makes a build.js file with all the dependencies.
+[Browserfy](http://browserify.org/) makes a build.js file with all the dependencies needed.
 
 TO DO:
-- Optimizations
+- "Real" Search function
 - implement Service Worker 
