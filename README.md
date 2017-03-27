@@ -12,3 +12,14 @@ npm start
 ```
 Then go to 
 > http://localhost:3000/
+
+## Build
+To build run the following command:
+```
+npm run build
+```
+It makes a build.js file with all the dependencies.
+
+TO DO:
+- Optimizations
+- implement Service Worker 
