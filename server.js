@@ -33,7 +33,9 @@ app.use(bodyParser.json());
 app.get('/', home);
 app.get('/object/:id', detailPage);
 
-app.listen(3000);
+app.listen(3000, function(){
+    console.log('APP IS HERE: http://localhost:3000');
+});
 
 function home(req, res) {
     // query = req.body.userName;
