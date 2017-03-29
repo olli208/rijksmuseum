@@ -22,6 +22,8 @@ npm run build
 [Browserfy](http://browserify.org/) 
 
 ## Performance optimizations
+Tested with GPRS(500ms, 50kb/s) 
+
 ### Critical CSS generated via [criticalpathcssgenerator](https://jonassebastianohlsson.com/criticalpathcssgenerator/). Which makes te head look like:
 ```
 <head>
@@ -39,9 +41,11 @@ npm run build
 ```
 #### With Critical CSS:
 ![With Critical CSS](audit/before.png)
+> Finish: 17.58s || DOMContentLoaded: 17.63s
 
 #### Without Critical CSS
 ![Without Critical CSS](audit/crit-css.png)
+> Finish: 15.95s || DOMContentLoaded: 6.82s
 
 > The critical path is the path to render a web page - what's needed before that can happen. CSS Stylesheets block rendering. Until the browser has requested, received, downloaded and parsed your stylesheets, the page will remain blank. By reducing the amount of CSS the browser has to go through, and by inlining it on the page (removing the HTTP request), we can get the page to render much, much faster.
 - Jonasse Bastian Ohlsson
