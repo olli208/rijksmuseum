@@ -18,8 +18,13 @@ To build run the following command:
 ```
 npm run build
 ```
-[Browserfy](http://browserify.org/) makes a buildroutes.js file with all the dependencies needed.
+[Browserfy](http://browserify.org/) makes a build.js file with all the dependencies needed.
+[Browserfy](http://browserify.org/) 
+
+## Sources 
+- [una](https://una.im/save-offline/#%F0%9F%92%81)
+- [How to Setup a Basic Service Worker (with Caching](https://www.youtube.com/watch?v=BfL3pprhnms)
+
 
 TO DO:
-- "Real" Search function
 - implement Service Worker 
