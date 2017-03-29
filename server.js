@@ -31,7 +31,8 @@ app.use(bodyParser.json());
 
 // Routers/pages
 app.get('/', home);
-app.get('/object/:id', detailPage);
+app.get('/:result/:id', detailPage);
+app.post('/result', search);
 
 app.listen(3000, function(){
     console.log('APP IS HERE: http://localhost:3000');
@@ -55,6 +56,19 @@ function detailPage(req, res) {
             detail = JSON.parse(body);
             res.render('detail', {
                 data: detail
+            });
+        }
+    });
+}
+
+function search(req, res){
+    var query = req.body.id;
+    // res.redirect('/object/' + query);
+    request(host + "?q=" + query + '&key=NG2q9L0R&format=json&ps=10&imgonly=true', function (error, response, body) {
+        if(!error && response.statusCode === 200) {
+            data = JSON.parse(body);
+            res.render('index', {
+                data: data
             });
         }
     });

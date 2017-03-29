@@ -1,16 +1,22 @@
 var cacheVer = 'v1';
 var cacheFiles = [
-    './style.css',
-    './build.js',
-    'index.html'
+    '/style.css',
+    '/'
 ];
 
 self.addEventListener('install' , function(event){
-    console.log("[serviceWorker] installed")
+    console.log("[serviceWorker] installed");
+
+    event.waitUntil(
+        caches.open(cacheVer).then(function(cache) {
+            console.log("[serviceWorker] caching chacheFiles");
+            return cache.addAll(cacheFiles);
+        })
+    )
 });
 
 self.addEventListener('activate' , function(event){
-    console.log("[serviceWorker] activated")
+    console.log("[serviceWorker] activated");
 });
 
 self.addEventListener('fetch', function(event) {
