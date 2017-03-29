@@ -76,3 +76,6 @@ Replacing The User Story With The Job Story](https://jtbd.info/replacing-the-use
 
 TO DO:
 - 
+
+ISSUES :
+- sometimes chaching of core files fails and  offline page doesnt work.
