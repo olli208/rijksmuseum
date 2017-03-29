@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
+    "expose": "ngrok http 3000",
     "build": "browserify src/index.js -o static/build.js"
   },
   "author": "",
