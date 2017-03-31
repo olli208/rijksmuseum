@@ -3,7 +3,7 @@ self.addEventListener('install', function (event) {
         caches.open('cache-core-v1')
             .then(function(cache) {
                 return cache.addAll([
-                    '/style.css',
+                    '/style.min.css',
                     '/offline/',
                     '/'
                     ]
