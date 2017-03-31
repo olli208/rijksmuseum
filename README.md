@@ -3,9 +3,9 @@
 ## repo for performance matters 
 
 ### About
-This repo is a server side version of [this assignment](https://github.com/olli208/web-app-from-scratch). Using expressroutes.js I tried to make a minimal version of that app. 
+This repo is a server side version of [this Rijksmuseum project](https://github.com/olli208/web-app-from-scratch). Using expressroutes.js I tried to make a minimal version of that app. It gets 10 art pieces from the Rijksmuseum API And the user can search the Rijksmuseum collection.
 
-The app works offline after the page loads once. With the help of a Service Worker we make it possible to serve cached pages (previosly visited) to the user without an internet connection.
+The app works offline after the page loads once. With the help of a Service Worker we make it possible to serve cached pages (previosly visited) to the user without an internet connection. When the user is offline and a visits a page not in the cache, He will get an offline page with a message and a list of pages from the cache.
 
 #### Job Stories
 - When I am on a vacation, I want to be able to see artPieces, even with no connection.
@@ -41,6 +41,7 @@ npm run build
 
 ### Dependencies
 ```
+{
     "body-parser": "1.15.2",
     "ejs": "^2.5.6",
     "express": "4.14.0",
@@ -52,7 +53,8 @@ npm run build
 ```
 
 ## Performance optimizations
-Tested with GPRS(500ms, 50kb/s) 
+### Tested with GPRS(500ms, 50kb/s) 
+I used the slowest internet possible in the Chrome Dev Tools settings to see how this simple app works (and IF it works).
 
 #### Without any optimizations
 ![Without optimizations](audit/before.png)
