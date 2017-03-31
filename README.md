@@ -12,6 +12,11 @@ The app works offline after the page loads once. With the help of a Service Work
 - When I have no connection, I want the app to tell me which art Pieces I have access to, So that I can check them out.
 - When I have no connection, I want be warned by the app, so I know that the app has limited functionality.
 
+#### Features
+- search for artworks via Rijksmuseum API
+- See description of art piece.
+- check previosly seen art pieces offline via a Service Worker.
+
 ### Clone the App
 Get the repo on your computer:
 ```
@@ -33,6 +38,18 @@ To build run the following command:
 npm run build
 ```
 [Browserfy](http://browserify.org/) makes a build.js file with all the dependencies needed.
+
+### Dependencies
+```
+    "body-parser": "1.15.2",
+    "ejs": "^2.5.6",
+    "express": "4.14.0",
+    "handlebars": "^4.0.6",
+    "nunjucks": "3.0.0",
+    "request": "^2.81.0",
+    "routie": "0.0.1"
+  }
+```
 
 ## Performance optimizations
 Tested with GPRS(500ms, 50kb/s) 
@@ -82,6 +99,7 @@ When usign a slow connection we get a faster page load and we see the important 
 - [
 Replacing The User Story With The Job Story](https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27)
 - [jbmoelker](https://github.com/jbmoelker/workshop-cmd-pwa/tree/exercise-11-use-cached-page/src)
+- [Rijksmuseum API reference](https://rijksmuseum.github.io/)
 
 
 TO DO:
