@@ -54,7 +54,7 @@ npm run build
 
 ## Performance optimizations
 ### Tested with GPRS(500ms, 50kb/s) 
-I used the slowest internet possible in the Chrome Dev Tools settings to see how this simple app works (and IF it works). Normally I would use [ngrok]((https://ngrok.com/) to host the app when developing so I can test the app with [Googles PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) and [webpagetest](https://www.webpagetest.org/). But I ran into two issues:
+I used the slowest internet possible in the Chrome Dev Tools settings to see how this simple app works (and IF it works). Normally I would use [ngrok](https://ngrok.com/) to host the app when developing so I can test the app with [Googles PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) and [webpagetest](https://www.webpagetest.org/). But I ran into two issues:
 - For the Serice Worker to work I need HTTPS 
 - When using HTTPS i get erros because the API gets images via HTTP.
 
