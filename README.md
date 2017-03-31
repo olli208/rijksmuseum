@@ -12,6 +12,13 @@ The app works offline after the page loads once. With the help of a Service Work
 - When I have no connection, I want the app to tell me which art Pieces I have access to, So that I can check them out.
 - When I have no connection, I want be warned by the app, so I know that the app has limited functionality.
 
+### Clone the App
+Get the repo on your computer:
+```
+git clone https://github.com/olli208/minor-bt-eind.git
+
+```
+
 ### Run the App
 When you have [NODE](https://nodejs.org/en/) & [NPM](https://www.npmjs.com/) on your computer run the following command:
 ```
