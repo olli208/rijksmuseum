@@ -48,6 +48,8 @@ An easy optimization is enabling gzip in the sever.js file using a module [compr
 ![With Gzip](audit/sw.png)
 > Finish: 17.09s || DOMContentLoaded: 7.72s
 
+The improvement is noticeable, and it's worth it to enable gzip on your server. It's easy to do and doesn't take a long time to set up.
+
 ### Critical CSS 
 Generated via [criticalpathcssgenerator](https://jonassebastianohlsson.com/criticalpathcssgenerator/). Which makes te head look like:
 ```
@@ -66,12 +68,13 @@ Generated via [criticalpathcssgenerator](https://jonassebastianohlsson.com/criti
 ```
 
 #### With Critical CSS
-![Without Critical CSS](audit/crit-css.png)
+![with Critical CSS](audit/crit-css.png)
 > Finish: 15.95s || DOMContentLoaded: 6.82s
 
 > The critical path is the path to render a web page - what's needed before that can happen. CSS Stylesheets block rendering. Until the browser has requested, received, downloaded and parsed your stylesheets, the page will remain blank. By reducing the amount of CSS the browser has to go through, and by inlining it on the page (removing the HTTP request), we can get the page to render much, much faster.
 - Jonasse Bastian Ohlsson
 
+When usign a slow connection we get a faster page load and we see the important CSS first, before anything else. Like gzip it's easy to do and it just adds style element in the head.
 
 ## Sources 
 - [una](https://una.im/save-offline/#%F0%9F%92%81)
