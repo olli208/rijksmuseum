@@ -88,4 +88,4 @@ TO DO:
 - 
 
 ISSUES :
-- sometimes chaching of core files fails and  offline page doesnt work.
+- 
