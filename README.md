@@ -1,16 +1,7 @@
-# Performance matters - (web-app-from-scratch - nodeJS version)
-
-## repo for performance matters 
-
-### About
+## About
 This repo is a server side version of [this Rijksmuseum project](https://github.com/olli208/web-app-from-scratch). Using expressroutes.js I tried to make a minimal version of that app. It gets 10 art pieces from the Rijksmuseum API And the user can search the Rijksmuseum collection.
 
 The app works offline after the page loads once. With the help of a Service Worker we make it possible to serve cached pages (previosly visited) to the user without an internet connection. When the user is offline and a visits a page not in the cache, He will get an offline page with a message and a list of pages from the cache.
-
-#### Job Stories
-- When I am on a vacation, I want to be able to see artPieces, even with no connection.
-- When I have no connection, I want the app to tell me which art Pieces I have access to, So that I can check them out.
-- When I have no connection, I want be warned by the app, so I know that the app has limited functionality.
 
 #### Features
 - search for artworks via Rijksmuseum API
